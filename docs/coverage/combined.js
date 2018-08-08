@@ -325,7 +325,11 @@ var assemblies = [
   {
     "name": "Hopac.Sql",
     "classes": [
-      { "name": "Hopac.Sql.Say", "reportPath": "Hopac.Sql_Say.htm", "coveredLines": 2, "uncoveredLines": 0, "coverableLines": 2, "totalLines": 9, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [], "branchCoverageHistory": [] },
+      { "name": "Hopac.Sql.DbCommand", "reportPath": "Hopac.Sql_DbCommand.htm", "coveredLines": 0, "uncoveredLines": 5, "coverableLines": 5, "totalLines": 294, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [], "branchCoverageHistory": [] },
+      { "name": "Hopac.Sql.DbConnection", "reportPath": "Hopac.Sql_DbConnection.htm", "coveredLines": 0, "uncoveredLines": 1, "coverableLines": 1, "totalLines": 294, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [], "branchCoverageHistory": [] },
+      { "name": "Hopac.Sql.DbDataReader", "reportPath": "Hopac.Sql_DbDataReader.htm", "coveredLines": 0, "uncoveredLines": 6, "coverableLines": 6, "totalLines": 294, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [], "branchCoverageHistory": [] },
+      { "name": "Hopac.Sql.Extensions", "reportPath": "Hopac.Sql_Extensions.htm", "coveredLines": 0, "uncoveredLines": 8, "coverableLines": 8, "totalLines": 294, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [], "branchCoverageHistory": [] },
+      { "name": "Hopac.Sql.Infixes", "reportPath": "Hopac.Sql_Infixes.htm", "coveredLines": 0, "uncoveredLines": 1, "coverableLines": 1, "totalLines": 294, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [], "branchCoverageHistory": [] },
       { "name": "System.AssemblyVersionInformation", "reportPath": "Hopac.Sql_AssemblyVersionInformation.htm", "coveredLines": 0, "uncoveredLines": 0, "coverableLines": 0, "totalLines": 0, "coverageType": "MethodCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [], "branchCoverageHistory": [] },
     ]},
 ];
