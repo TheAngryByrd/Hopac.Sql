@@ -2,13 +2,21 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFrameworks>netcoreapp2.1;netcoreapp2.0;net461</TargetFrameworks>
+        <TargetFrameworks>netcoreapp2.1;net462</TargetFrameworks>
+        <ServerGarbageCollection>true</ServerGarbageCollection>
+        <ConcurrentGarbageCollection>true</ConcurrentGarbageCollection>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     </PropertyGroup>
     <ItemGroup>
+        <None Include="App.config" />
         <Compile Include="AssemblyInfo.fs" />
+        <Compile Include="Migrations.fs" />
+        <Compile Include="ExpectoHelpers.fs" />
+        <Compile Include="DatabaseHelpers.fs" />
         <Compile Include="Tests.fs" />
         <Compile Include="Main.fs" />
     </ItemGroup>
+    <ItemGroup> <Reference Include="netstandard" /> </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="../../src/Hopac.Sql/Hopac.Sql.fsproj" />
     </ItemGroup>

@@ -4,10 +4,6 @@ open System.Data.Common
 open Hopac
 open System.Data
 
-[<AutoOpen>]
-module Infixes =
-    let (^) = (<|)
-
 [<RequireQualifiedAccess>]
 module DbConnection =
 
@@ -24,8 +20,25 @@ module DbConnection =
     ///
     /// **Output Type**
     ///   * `Alt<unit>`
-    let openConn (conn : DbConnection) =
+    let openConnection (conn : DbConnection) =
         Alt.fromUnitTask conn.OpenAsync
+
+
+    /// **Description**
+    ///
+    /// If a connection's ConnectionState is Closed, this opens the connection.
+    ///
+    /// **Parameters**
+    ///   * `conn` - parameter of type `DbConnection`
+    ///
+    /// **Output Type**
+    ///   * `Alt<unit>`
+    let ensureOpen (conn : DbConnection) =
+         if conn.State = ConnectionState.Closed then
+            openConnection conn
+         else
+            Alt.unit ()
+
 
 [<RequireQualifiedAccess>]
 module DbCommand =
@@ -178,7 +191,7 @@ module Extensions =
         /// **Output Type**
         ///   * `Alt<unit>`
         member x.OpenAlt () =
-            DbConnection.openConn x
+            DbConnection.openConnection x
 
     type System.Data.Common.DbCommand with
 
