@@ -82,12 +82,12 @@ module Sql =
           else Some(v.GetValue(a, [| |]))
         else None
 
-    let normalizeParameters (key,value) =
+    let rec normalizeParameters (key,value) =
         match value with
         | null ->
             (key,box DBNull.Value)
         | SomeObj(x) ->
-            (key,x)
+            normalizeParameters (key,x)
         | _ ->
             (key, value)
 
